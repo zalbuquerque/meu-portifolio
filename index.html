@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Zara Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes disponibilizadas pelo Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!-- Cabeçalho fixo -->
+    <header id="main-header">       
+        <div class="container">
+            <h1 id="header-name">Zara Albuquerque</h1>
+            <!-- Navegação entre seções da página -->
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Sobre mim -->
+        <section id="sobre" class="section-container">
+            <div class="container">
+                <h2>Sobre mim</h2>
+                <div class="content">
+                    <!-- Imagem de perfil -->
+                    <img src="profile.PNG" alt="Foto de Perfil" class="profile-pic">
+                    <p>Olá! Sou Zara Albuquerque, estudante de Análise e Desenvolvimento de Sistemas, curiosa por natureza, gosto de explorar novas tecnologias e estou sempre buscando aprender novas ferramentas e boas práticas de desenvolvimento. 
+                    Atualmente, estou aprofundando meus conhecimentos em frameworks modernos e boas práticas de versionamento e colaboração com Git. Busco oportunidades que me permitam crescer como profissional e contribuir com soluções criativas, eficientes e acessíveis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Formação acadêmica -->
+        <section id="formacao" class="section-container">
+            <div class="container">
+                <h2>Formação</h2>
+                <div class="content">
+                    <p></p>
+                    <ul>
+                        <li>Tecnólogo em Análise e Desenvolvimento de Sistemas - UNINTER (2024-2027) - Cursando</li>
+                        <li>Bacharelado em Engenharia ELétrica - UFAC (2020-2023) - Interrompido </li>                       
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio de projetos -->
+        <section id="portfolio" class="section-container">
+            <div class="container">
+                <h2>Portfólio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="perfilgame.PNG" alt="Imagem do Projeto 1" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <h3>Perfil Game Online</h3>
+                            <p>Gerador de cartas online do clássico jogo de adivinhação “Perfil”, onde jogadores devem descobrir uma palavra secreta a partir de dicas. Criado com o propósito de aplicar conceitos de lógica de programação, manipulação de DOM e JavaScript.</p>
+                            <p>Disponível em:  <a href="https://zalbuquerque.github.io/jogo-perfil-online/">Perfil Game </a></p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="page.jpg" alt="Imagem do Projeto 2" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <h3>Página Jordão</h3>
+                            <p>Projeto de uma página web voltada para promover o turismo em Jordão - Acre. Desenvolvido como exercício prático para aplicar conceitos de HTML e CSS na criação de uma landing page com estrutura limpa e organizada.</p>
+                            <P>Disponível em: <a href="https://zalbuquerque.github.io/pagina-Jordao/">Jordão</a></P>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de contato com formulário e informações -->
+        <section id="contato" class="section-container">
+            <div class="container">
+                <h2>Contato</h2>
+                
+                <!-- Formulário de contato -->
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+
+                <!-- Informações de contato alternativas -->
+                <div class="contact-info">
+                    <p>Você também pode me encontrar aqui:</p>
+                    <p><a href="mailto:zaraalb7@gmail.com">E-mail</a></p>
+                    <p><a href="https://www.linkedin.com/in/zara-silva/" target="_blank">Linkedin</a></p>
+                    <p><a href="https://github.com/zalbuquerque" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer id="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Zara Albuquerque</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+/*
+  Paleta de cores
+*/
+:root {
+    --primary-color: #6a0dad;
+    --secondary-color: #483d8b;
+    --background-color: #f3e5f5;
+    --text-color: #333;
+    --light-color: #FFFFFF;
+    --header-height: 90px;
+}
+
+/* Reset básico de margens, paddings e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Habilita scroll suave nativo */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilização global do body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: var(--header-height);
+}
+
+/* Container centralizador para o conteúdo principal */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header fixo no topo com navegação */
+#main-header {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+/* Layout do conteúdo dentro do header */
+#main-header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+#logo {
+    display: none; /* Oculta o logo para centralizar o menu */
+}
+
+/* Nome principal no header */
+#header-name {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+/* Lista de navegação horizontal */
+#main-header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Espaçamento entre itens do menu */
+#main-header nav ul li {
+    margin-left: 20px;
+}
+
+/* Estilo dos links do menu */
+#main-header nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover nos links do menu */
+#main-header nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Seções principais da página */
+.section-container {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alterna cor de fundo para seções pares */
+.section-container:nth-child(even) {
+    background-color: var(--light-color);
+}
+
+/* Título das seções */
+.section-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Linha decorativa abaixo do título */
+.section-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+}
+
+/* Layout da seção Sobre mim */
+#sobre .content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Estilo da foto de perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+/* Lista de formação acadêmica */
+#formacao ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* Item da lista de formação */
+#formacao ul li {
+    background: #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* Grid responsivo para projetos do portfólio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card de projeto do portfólio */
+.portfolio-item {
+    background: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Efeito hover no card do portfólio */
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Imagem do projeto */
+.portfolio-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Conteúdo textual do projeto */
+.portfolio-content {
+    padding: 20px;
+}
+
+/* Título do projeto */
+.portfolio-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Texto introdutório da seção de contato */
+#contato p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* Formulário de contato estilizado */
+#contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Grupo de campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Rótulo dos campos do formulário */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Campos de entrada e textarea do formulário */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Destaque ao focar nos campos do formulário */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Botão principal */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover do botão principal */
+.btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Bloco de informações de contato alternativas */
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Parágrafos das informações de contato */
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Links das informações de contato */
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Hover nos links de contato */
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé da página */
+#main-footer {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsividade para telas menores */
+@media(max-width: 768px) {
+    #main-header .container {
+        justify-content: center;
+    }
+    #sobre .content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
