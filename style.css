@@ -72,6 +72,28 @@ body {
     font-weight: 300;
     margin-bottom: 5px;
 }
+/* Nome principal no header - fonte marcante, negrito e letras maiúsculas */
+#header-name {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-color);
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    transition: none;
+    z-index: auto;
+    text-transform: uppercase;
+}
+@media (max-width: 700px) {
+    #header-name {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+}
 
 /* Lista de navegação horizontal */
 #main-header nav ul {
